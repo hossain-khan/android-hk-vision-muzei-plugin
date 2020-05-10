@@ -87,3 +87,4 @@ lint/tmp/
 keystore.properties
 *.pepk
 keystore/upload-keystore.jks
+keystore/deployment_cert.der
