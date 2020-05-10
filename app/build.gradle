@@ -2,6 +2,27 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
+
+// Creates a variable called keystorePropertiesFile, and initializes it to the keystore.properties file.
+// https://developer.android.com/studio/build/gradle-tips#remove-private-signing-information-from-your-project
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+
+// Initializes a new Properties() object called keystoreProperties.
+def keystoreProperties = new Properties()
+
+// Loads the keystore.properties file into the keystoreProperties object.
+if(keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+} else {
+    // For CI builds, use debug cert to pass it.
+    // https://developer.android.com/studio/publish/app-signing#debug-mode
+    // https://coderwall.com/p/r09hoq/android-generate-release-debug-keystores
+    keystoreProperties['keyAlias']='androiddebugkey'
+    keystoreProperties['keyPassword']='android'
+    keystoreProperties['storeFile']='keystore/debug.keystore'
+    keystoreProperties['storePassword']='android'
+}
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
@@ -14,6 +35,15 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        config {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
     }
 
     buildTypes {
