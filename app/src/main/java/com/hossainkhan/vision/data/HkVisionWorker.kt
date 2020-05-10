@@ -11,9 +11,9 @@ import androidx.work.Worker
 import androidx.work.WorkerParameters
 import com.google.android.apps.muzei.api.provider.Artwork
 import com.google.android.apps.muzei.api.provider.MuzeiArtProvider
+import com.google.android.apps.muzei.api.provider.ProviderClient
 import com.google.android.apps.muzei.api.provider.ProviderContract
 import com.hossainkhan.vision.model.VisionPhotos
-import com.google.android.apps.muzei.api.provider.ProviderClient
 
 /**
  * Background worker that is used to load the images.
@@ -79,7 +79,7 @@ class HkVisionWorker(
                     title = photo.title
                     byline = photo.subtitle
                     persistentUri = photo.rawSource.toUri()
-                    webUri = photo.imageSource.toUri()
+                    webUri = photo.webUrl.toUri()
                 }
             })
 
