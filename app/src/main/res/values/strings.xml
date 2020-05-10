@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Vision Muzei</string>
+    <string name="name">H.K. Vision</string>
+    <string name="description">Featured photos from H.K. Vision website.</string>
 </resources>
