@@ -1,5 +1,7 @@
 package com.hossainkhan.vision.model
 
+import com.squareup.moshi.Json
+
 /**
  * Single photo object.
  *
@@ -18,6 +20,8 @@ data class Photo(
     val title: String = "",
     val subtitle: String = "",
     val date: String = "",
-    val image_src: String = "",
-    val raw_src: String = ""
+    @Json(name = "image_src")
+    val imageSource: String = "",
+    @Json(name = "raw_src")
+    val rawSource: String = ""
 )

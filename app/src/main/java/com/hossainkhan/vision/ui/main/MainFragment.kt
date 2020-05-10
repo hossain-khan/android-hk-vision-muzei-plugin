@@ -1,18 +1,12 @@
 package com.hossainkhan.vision.ui.main
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProviders
 import com.hossainkhan.vision.R
-import com.hossainkhan.vision.data.HkVisionService
-import com.hossainkhan.vision.model.VisionPhotos
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class MainFragment : Fragment() {
 

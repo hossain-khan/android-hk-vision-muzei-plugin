@@ -45,7 +45,7 @@ class HkVisionWorker(
             Log.w(LOG_TAG, "Error reading response")
             return Result.retry()
         } else {
-            Log.d(LOG_TAG, "Found photos: ${visionPhotos.featured_photos}")
+            Log.d(LOG_TAG, "Found photos: ${visionPhotos.featuredPhotos}")
             return Result.success()
         }
 

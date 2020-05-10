@@ -1,5 +1,7 @@
 package com.hossainkhan.vision.model
 
+import com.squareup.moshi.Json
+
 /**
  * Root object for HK Vision photos.
  *
@@ -16,5 +18,6 @@ data class VisionPhotos(
     val source: String = "",
     val author: String = "",
     val copyright: String = "",
-    val featured_photos: List<Photo> = emptyList()
+    @Json(name = "featured_photos")
+    val featuredPhotos: List<Photo> = emptyList()
 )
