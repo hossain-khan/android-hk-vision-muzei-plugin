@@ -84,3 +84,6 @@ lint/outputs/
 lint/tmp/
 # lint/reports/
 .DS_Store
+keystore.properties
+*.pepk
+keystore/upload-keystore.jks
