@@ -18,6 +18,6 @@ data class VisionPhotos(
     val source: String = "",
     val author: String = "",
     val copyright: String = "",
-    @Json(name = "featured_photos")
+    @field:Json(name = "featured_photos")
     val featuredPhotos: List<Photo> = emptyList()
 )

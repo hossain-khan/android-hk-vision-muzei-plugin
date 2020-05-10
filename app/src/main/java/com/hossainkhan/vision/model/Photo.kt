@@ -20,8 +20,8 @@ data class Photo(
     val title: String = "",
     val subtitle: String = "",
     val date: String = "",
-    @Json(name = "image_src")
+    @field:Json(name = "image_src")
     val imageSource: String = "",
-    @Json(name = "raw_src")
+    @field:Json(name = "raw_src")
     val rawSource: String = ""
 )
