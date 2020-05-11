@@ -13,11 +13,15 @@ import com.squareup.moshi.Json
  *    "featured_photos": [ { ... }, { ... } ]
  * }
  * ```
+ *
+ * See [Photos.json](https://vision.hossainkhan.com/photos.json)
  */
 data class VisionPhotos(
     val source: String = "",
     val author: String = "",
     val copyright: String = "",
     @field:Json(name = "featured_photos")
-    val featuredPhotos: List<Photo> = emptyList()
+    val featuredPhotos: List<Photo> = emptyList(),
+    @field:Json(name = "blog_photos")
+    val blogPhotos: List<Photo> = emptyList()
 )

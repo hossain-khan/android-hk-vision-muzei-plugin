@@ -73,15 +73,18 @@ class HkVisionWorker(
                 MUZEI_PROVIDER_AUTHORITY
             )
 
-            providerClient.addArtwork(visionPhotos.featuredPhotos.map { photo ->
-                Artwork().apply {
-                    token = photo.rawSource
-                    title = photo.title
-                    byline = photo.subtitle
-                    persistentUri = photo.rawSource.toUri()
-                    webUri = photo.webUrl.toUri()
-                }
-            })
+            providerClient.addArtwork(
+                visionPhotos.featuredPhotos
+                    .plus(visionPhotos.blogPhotos)
+                    .map { photo ->
+                        Artwork().apply {
+                            token = photo.rawSource
+                            title = photo.title
+                            byline = photo.subtitle
+                            persistentUri = photo.rawSource.toUri()
+                            webUri = photo.webUrl.toUri()
+                        }
+                    })
 
             return Result.success()
         }
