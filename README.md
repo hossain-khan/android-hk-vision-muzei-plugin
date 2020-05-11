@@ -9,7 +9,7 @@ Next, install [Vision Muzei Plugin app](https://play.google.com/store/apps/detai
 
 Once installed, go back to **Muzei** app, then the source should show up. Choose the wallpaper you like for your phone. Enjoy.
 
-<img width="250" src="https://user-images.githubusercontent.com/99822/81494296-cad4e400-9275-11ea-9235-fe702e996eb1.png" />
+![android-muzei-plugin-demo-large-small](https://user-images.githubusercontent.com/99822/81618324-19d56300-93b5-11ea-8367-62376439a99c.png)
 
 ## Dev Note
 To build and install locally, use following command:
