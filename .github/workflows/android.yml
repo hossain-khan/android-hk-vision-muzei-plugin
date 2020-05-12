@@ -19,3 +19,20 @@ jobs:
         java-version: 1.8
     - name: Build with Gradle
       run: ./gradlew lint build
+
+#
+# This is experimental section to showcase multiple environments like JDK, Node, etc
+# can be mixed together to have greater control in the CI environment.
+#
+# In this example, we activate Node on CI, install a Node module using npm
+# and validate `AndroidManifest.xml` file as proof-of-concept (not required for Android dev).
+#
+    - name: Setup NodeJS
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+
+    - name: Install XML Validator
+      run: npm install -g fast-xml-parser
+    - name: Validate AndroidManifest.xml
+      run: xml2js -V app/src/main/AndroidManifest.xml
