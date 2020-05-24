@@ -13,6 +13,7 @@ import com.google.android.apps.muzei.api.provider.Artwork
 import com.google.android.apps.muzei.api.provider.MuzeiArtProvider
 import com.google.android.apps.muzei.api.provider.ProviderClient
 import com.google.android.apps.muzei.api.provider.ProviderContract
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.hossainkhan.vision.model.VisionPhotos
 
 /**
@@ -21,11 +22,10 @@ import com.hossainkhan.vision.model.VisionPhotos
  * References:
  * - [UnsplashExampleWorker.kt](https://github.com/romannurik/muzei/blob/master/example-unsplash/src/main/java/com/example/muzei/unsplash/UnsplashExampleWorker.kt)
  */
-class HkVisionWorker(
+class HkVisionWorker constructor(
     context: Context,
     workerParams: WorkerParameters
 ) : Worker(context, workerParams) {
-
 
     companion object {
         private const val LOG_TAG = "HkVisionWorker"
@@ -56,16 +56,22 @@ class HkVisionWorker(
      */
     override fun doWork(): Result {
         val visionPhotos: VisionPhotos? = try {
+            FirebaseCrashlytics.getInstance().log("Loading HK Vision Photos")
             HkVisionService.api.photos().execute().body()
-        } catch (e: Exception) {
-            Log.w(LOG_TAG, "Error reading response", e)
+        } catch (error: Exception) {
+            Log.w(LOG_TAG, "Error reading response", error)
+            FirebaseCrashlytics.getInstance().recordException(error)
             return Result.retry()
         }
 
         if (visionPhotos == null || visionPhotos.featuredPhotos.isEmpty()) {
             Log.w(LOG_TAG, "Error reading response")
+            FirebaseCrashlytics.getInstance().recordException(
+                IllegalStateException("Photo response is invalid or empty: ${visionPhotos?.featuredPhotos?.size}")
+            )
             return Result.retry()
         } else {
+            FirebaseCrashlytics.getInstance().log("Found total photos: ${visionPhotos.featuredPhotos.size}")
             Log.d(LOG_TAG, "Found total photos: ${visionPhotos.featuredPhotos.size}")
 
             val providerClient = ProviderContract.getProviderClient(
