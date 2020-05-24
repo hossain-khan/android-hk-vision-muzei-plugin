@@ -14,7 +14,20 @@ NOTE: You *NEED TO* install "Muzei Live Wallpaper" app before using this plugin.
 This is a plugin for "Muzei Live Wallpaper" Android application that allows you to use wallpaper from H.K. Vision website (https://vision.hossainkhan.com/).
 
 This is a open-source Muzei plugin app. If you find any issue, you can report it at following project:
-https://github.com/amardeshbd/android-hk-vision-muzei-plugin or https://bit.ly/muzei-vision
+https://bit.ly/muzei-vision
 
 For latest releases notes, visit:
 https://github.com/amardeshbd/android-hk-vision-muzei-plugin/releases
+
+#### Changelog
+
+##### v1.2
+- Added Firebase Crashlytics integration to track any error loading images.
+
+##### v1.1
+- Added additional pictures to the Muzei source. Enjoy! ^_^
+
+##### v1.0
+- Initial release with H.K. Vision featured images.
+
+
