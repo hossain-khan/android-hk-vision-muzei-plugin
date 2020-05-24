@@ -6,8 +6,14 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:4.0.0-beta05"
+        classpath 'com.android.tools.build:gradle:4.0.0-rc01'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        // Google Services Gradle plugin v4.3.2 or later
+        classpath "com.google.gms:google-services:4.3.3"
+
+        // Add the Crashlytics Gradle plugin.
+        classpath "com.google.firebase:firebase-crashlytics-gradle:2.1.1"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "5479530645",
+    "firebase_url": "https://hk-vision-muzei.firebaseio.com",
+    "project_id": "hk-vision-muzei",
+    "storage_bucket": "hk-vision-muzei.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:5479530645:android:3f31267fea0bfb93699b9c",
+        "android_client_info": {
+          "package_name": "com.hossainkhan.vision"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "5479530645-ioou10fllea50rpfac1hqhs0qg81jera.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCwx12rP94n6yQMjGWH2u-veJHt30UNos"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "5479530645-ioou10fllea50rpfac1hqhs0qg81jera.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
