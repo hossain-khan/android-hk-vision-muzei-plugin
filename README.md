@@ -3,6 +3,9 @@
 # HK Vision - Muzei Plugin
 Muzei wallpaper source plugin for [vision.hossainkhan.com](https://vision.hossainkhan.com/) site.
 
+## Background
+I wrote a quick article behind creating this plugin. [Read more about it at Medium.com](https://medium.com/@hossainkhan/hackathon-creating-the-simplest-muzei-wallpaper-plugin-for-android-9d080dbb4bf)
+
 ## How to use
 Install [Muzei app](https://play.google.com/store/apps/details?id=net.nurik.roman.muzei) from Google Play.
 [![Muzei-on-Google-Play](https://user-images.githubusercontent.com/99822/81494196-decc1600-9274-11ea-9296-f167952e5fc1.png)](https://play.google.com/store/apps/details?id=net.nurik.roman.muzei)
@@ -23,7 +26,7 @@ adb install app/build/outputs/apk/debug/app-debug.apk
 
 # References
 * https://muzei.co/
-* http://api.muzei.co/
+* https://api.muzei.co/
 * https://github.com/romannurik/muzei/releases/tag/api3.2.0
 * https://medium.com/muzei/muzei-3-0-and-the-new-api-4fd3d6133db6
 * https://medium.com/muzei/announcing-muzei-live-wallpaper-3-0-d167dd5795a4
