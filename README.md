@@ -14,6 +14,8 @@ Next, install [Vision Muzei Plugin app](https://play.google.com/store/apps/detai
 
 Once installed, go back to **Muzei** app, then the source should show up. Choose the wallpaper you like for your phone. Enjoy.
 
+> _NOTE: By default, the walpaper changes **every 3 hours**, you may want to change it to you liking. For example every day :-)_
+
 [![android-muzei-plugin-demo-large-small](https://user-images.githubusercontent.com/99822/81618324-19d56300-93b5-11ea-8367-62376439a99c.png)](https://play.google.com/store/apps/details?id=com.hossainkhan.vision)
 
 ## Dev Note
