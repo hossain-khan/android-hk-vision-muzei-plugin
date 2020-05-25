@@ -29,6 +29,9 @@ jobs:
 # In this example, we activate Node on CI, install a Node module using npm
 # and validate `AndroidManifest.xml` file as proof-of-concept (not required for Android dev).
 #
+# See technical article on Medium.com
+# - https://medium.com/@hossainkhan/use-node-js-tools-on-github-actions-ci-workflow-120fb3b4a3e1
+#
     - name: Setup NodeJS
       uses: actions/setup-node@v1
       with:
