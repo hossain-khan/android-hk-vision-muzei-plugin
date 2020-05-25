@@ -8,7 +8,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -19,6 +18,9 @@ jobs:
         java-version: 1.8
     - name: Build with Gradle
       run: ./gradlew lint build
+
+    - name: Run Unit Tests
+      run: ./gradlew test
 
 #
 # This is experimental section to showcase multiple environments like JDK, Node, etc

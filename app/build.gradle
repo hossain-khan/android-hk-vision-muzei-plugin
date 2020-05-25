@@ -92,4 +92,9 @@ dependencies {
     // Add the Firebase Crashlytics SDK.
     // https://firebase.google.com/docs/crashlytics/get-started?platform=android
     implementation "com.google.firebase:firebase-crashlytics:17.0.0"
+
+    //
+    // Unit tests and related libraries
+    //
+    testImplementation 'junit:junit:4.13'
 }
