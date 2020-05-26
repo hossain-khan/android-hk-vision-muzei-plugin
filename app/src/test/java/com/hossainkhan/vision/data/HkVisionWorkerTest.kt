@@ -34,6 +34,8 @@ class HkVisionWorkerTest {
         every { FirebaseCrashlytics.getInstance() } returns mockk(relaxed = true)
         mockkStatic(Log::class)
         every { Log.w(any(), any(), any()) } returns mockk(relaxed = true)
+        every { Log.w(any(), ofType(Throwable::class)) } returns mockk(relaxed = true)
+        every { Log.w(any(), ofType(String::class)) } returns mockk(relaxed = true)
         every { Log.d(any(), any()) } returns mockk(relaxed = true)
         mockkStatic(ProviderContract::class)
         every { ProviderContract.getProviderClient(any(), ofType(String::class)) } returns providerClient
@@ -51,6 +53,15 @@ class HkVisionWorkerTest {
     @Test
     fun `doWork - given photos api request fails - then work is re-queued`() {
         every { apiService.photos().execute() } throws IllegalStateException("API Request Failed")
+
+        val result = sut.doWork()
+
+        assertTrue(result is Result.Retry)
+    }
+
+    @Test
+    fun `doWork - given photos api request success with no photo data - then work is re-queued`() {
+        every { apiService.photos().execute().body() } returns VisionPhotos()
 
         val result = sut.doWork()
 
