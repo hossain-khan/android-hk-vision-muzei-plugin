@@ -83,13 +83,14 @@ class HkVisionWorker constructor(
                 visionPhotos.featuredPhotos
                     .plus(visionPhotos.blogPhotos)
                     .map { photo ->
-                        Artwork().apply {
-                            token = photo.rawSource
-                            title = photo.title
-                            byline = photo.subtitle
-                            persistentUri = photo.rawSource.toUri()
-                            webUri = photo.webUrl.toUri()
-                        }
+                        Artwork(
+                            token = photo.rawSource,
+                            title = photo.title,
+                            byline = photo.subtitle,
+                            persistentUri = photo.rawSource.toUri(),
+                            webUri = photo.webUrl.toUri(),
+                            attribution = "H.K. Vision (vision.hossainkhan.com)"
+                        )
                     })
 
             return Result.success()
