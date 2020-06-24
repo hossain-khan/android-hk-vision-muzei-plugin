@@ -1,4 +1,4 @@
-[![Android CI](https://github.com/amardeshbd/android-hk-vision-muzei-plugin/workflows/Android%20CI/badge.svg?branch=master)](https://github.com/amardeshbd/android-hk-vision-muzei-plugin/actions) [![CodeFactor](https://www.codefactor.io/repository/github/amardeshbd/android-hk-vision-muzei-plugin/badge)](https://www.codefactor.io/repository/github/amardeshbd/android-hk-vision-muzei-plugin) [![Muzei.co](https://img.shields.io/badge/muzei.co-API%203.2%2B-blue)](http://api.muzei.co/)
+[![Android CI](https://github.com/amardeshbd/android-hk-vision-muzei-plugin/workflows/Android%20CI/badge.svg?branch=master)](https://github.com/amardeshbd/android-hk-vision-muzei-plugin/actions) [![CodeFactor](https://www.codefactor.io/repository/github/amardeshbd/android-hk-vision-muzei-plugin/badge)](https://www.codefactor.io/repository/github/amardeshbd/android-hk-vision-muzei-plugin) [![Muzei.co](https://img.shields.io/badge/muzei.co-API%203.4%2B-blue)](http://api.muzei.co/)
 
 # HK Vision - Muzei Plugin
 Muzei wallpaper source plugin for [vision.hossainkhan.com](https://vision.hossainkhan.com/) site.
@@ -22,7 +22,8 @@ Once installed, go back to **Muzei** app, then the source should show up. Choose
 To build and install locally, use following command:
 
 ```
-./gradlew clean assembleDebug
+adb uninstall com.hossainkhan.vision && \
+./gradlew clean assembleDebug && \
 adb install app/build/outputs/apk/debug/app-debug.apk 
 ```
 
