@@ -14,13 +14,30 @@
 
         <provider
             android:name=".muzei.HkVisionArtProvider"
-            android:authorities="com.hossainkhan.vision"
+            android:authorities="${hkVisionAuthority}"
             android:description="@string/description"
             android:exported="true"
             android:label="@string/name"
             android:permission="com.google.android.apps.muzei.api.ACCESS_PROVIDER">
             <intent-filter>
                 <action android:name="com.google.android.apps.muzei.api.MuzeiArtProvider" />
+            </intent-filter>
+        </provider>
+
+        <!--
+            Provides a prebuilt DocumentsProvider that allows users to browse and
+            select images from your MuzeiArtProvider via the default file picker and Files app.
+
+            See https://github.com/romannurik/muzei/releases/tag/api3.4.0-alpha3
+        -->
+        <provider
+            android:name="com.google.android.apps.muzei.api.provider.MuzeiArtDocumentsProvider"
+            android:authorities="${hkVisionAuthority}.documents"
+            android:exported="true"
+            android:grantUriPermissions="true"
+            android:permission="android.permission.MANAGE_DOCUMENTS">
+            <intent-filter>
+                <action android:name="android.content.action.DOCUMENTS_PROVIDER" />
             </intent-filter>
         </provider>
     </application>
