@@ -21,7 +21,7 @@ if(keystorePropertiesFile.exists()) {
     // https://coderwall.com/p/r09hoq/android-generate-release-debug-keystores
     keystoreProperties['keyAlias']='androiddebugkey'
     keystoreProperties['keyPassword']='android'
-    keystoreProperties['storeFile']='keystore/debug.keystore'
+    keystoreProperties['storeFile']='../keystore/debug.keystore'
     keystoreProperties['storePassword']='android'
 }
 
@@ -34,7 +34,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 7
-        versionName "1.5"
+        versionName "1.4"
 
         // The authority for the `MuzeiArtProvider` and `MuzeiArtDocumentsProvider`
         def hkVisionAuthorityValue = "com.hossainkhan.vision"

@@ -21,6 +21,15 @@ https://github.com/amardeshbd/android-hk-vision-muzei-plugin/releases
 
 #### Changelog
 
+#### v1.4
+- Updated to Muzei plugin 3.4-alpha3
+- Target Android 11
+- Send H.K. Vision images to anywhere using Android OS file picker 
+
+#### v1.3
+- Updated to Muzei plugin 3.4-alpha2
+- Updated other libraries
+
 ##### v1.2
 - Added Firebase Crashlytics integration to track any error loading images.
 
