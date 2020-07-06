@@ -26,15 +26,20 @@ if(keystorePropertiesFile.exists()) {
 }
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
     buildToolsVersion "29.0.3"
 
     defaultConfig {
         applicationId "com.hossainkhan.vision"
         minSdkVersion 21
-        targetSdkVersion 29
-        versionCode 6
-        versionName "1.4"
+        targetSdkVersion 30
+        versionCode 7
+        versionName "1.5"
+
+        // The authority for the `MuzeiArtProvider` and `MuzeiArtDocumentsProvider`
+        def hkVisionAuthorityValue = "com.hossainkhan.vision"
+        manifestPlaceholders = [hkVisionAuthority: hkVisionAuthorityValue]
+        buildConfigField "String", "HK_VISION_MUZEI_PROVIDER_AUTHORITY", "\"${hkVisionAuthorityValue}\""
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -72,7 +77,7 @@ dependencies {
 
     // Muzei Plugin
     // https://github.com/romannurik/muzei/releases
-    implementation "com.google.android.apps.muzei:muzei-api:3.4.0-alpha02"
+    implementation "com.google.android.apps.muzei:muzei-api:3.4.0-alpha03"
 
     // AndroidX Work Manager
     // https://developer.android.com/jetpack/androidx/releases/work

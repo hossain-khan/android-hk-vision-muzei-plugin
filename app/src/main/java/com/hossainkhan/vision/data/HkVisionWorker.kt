@@ -10,10 +10,9 @@ import androidx.work.WorkManager
 import androidx.work.Worker
 import androidx.work.WorkerParameters
 import com.google.android.apps.muzei.api.provider.Artwork
-import com.google.android.apps.muzei.api.provider.MuzeiArtProvider
-import com.google.android.apps.muzei.api.provider.ProviderClient
 import com.google.android.apps.muzei.api.provider.ProviderContract
 import com.google.firebase.crashlytics.FirebaseCrashlytics
+import com.hossainkhan.vision.BuildConfig.HK_VISION_MUZEI_PROVIDER_AUTHORITY
 import com.hossainkhan.vision.model.VisionPhotos
 
 /**
@@ -29,11 +28,6 @@ class HkVisionWorker constructor(
 
     companion object {
         private const val LOG_TAG = "HkVisionWorker"
-
-        /**
-         * The authority for the [MuzeiArtProvider] is needed a [ProviderClient] for.
-         */
-        private const val MUZEI_PROVIDER_AUTHORITY = "com.hossainkhan.vision"
 
         internal fun enqueueLoad(context: Context) {
             val workManager = WorkManager.getInstance(context)
@@ -76,7 +70,7 @@ class HkVisionWorker constructor(
 
             val providerClient = ProviderContract.getProviderClient(
                 applicationContext,
-                MUZEI_PROVIDER_AUTHORITY
+                HK_VISION_MUZEI_PROVIDER_AUTHORITY
             )
 
             providerClient.addArtwork(
