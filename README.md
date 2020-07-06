@@ -18,6 +18,8 @@ Once installed, go back to **Muzei** app, then the source should show up. Choose
 
 [![android-muzei-plugin-demo-large-small](https://user-images.githubusercontent.com/99822/81618324-19d56300-93b5-11ea-8367-62376439a99c.png)](https://play.google.com/store/apps/details?id=com.hossainkhan.vision)
 
+Test Github action trigger
+
 ## Dev Note
 To build and install locally, use following command:
 
