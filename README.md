@@ -7,7 +7,7 @@ Muzei wallpaper source plugin for [vision.hossainkhan.com](https://vision.hossai
 I wrote a quick article behind creating this plugin. [Read more about it at Medium.com](https://medium.com/@hossainkhan/hackathon-creating-the-simplest-muzei-wallpaper-plugin-for-android-9d080dbb4bf)
 
 ## How to use
-Install [Muzei app](https://play.google.com/store/apps/details?id=net.nurik.roman.muzei) from Google Play.
+First, install the [Muzei Live Wallpaper](https://play.google.com/store/apps/details?id=net.nurik.roman.muzei) Android app from Google Play store.  
 [![Muzei-on-Google-Play](https://user-images.githubusercontent.com/99822/81494196-decc1600-9274-11ea-9296-f167952e5fc1.png)](https://play.google.com/store/apps/details?id=net.nurik.roman.muzei)
 
 Next, install [Vision Muzei Plugin app](https://play.google.com/store/apps/details?id=com.hossainkhan.vision) from Google Play.
