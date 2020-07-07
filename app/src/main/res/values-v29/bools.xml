@@ -1,0 +1,10 @@
+<resources>
+    <!--
+        The `enable_launcher` boolean resource value to only enable launcher activity on API 29+
+        devices as it is on API 29+ that a launcher icon becomes mandatory for every app.
+
+        - https://developer.android.com/guide/topics/manifest/activity-element#enabled
+        - https://developer.android.com/about/versions/10/behavior-changes-all
+    -->
+    <bool name="enable_launcher">true</bool>
+</resources>

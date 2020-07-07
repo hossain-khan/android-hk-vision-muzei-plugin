@@ -12,6 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <activity-alias
+            android:name=".HkVisionLauncherActivity"
+            android:enabled="@bool/enable_launcher"
+            android:targetActivity=".HkVisionRedirectActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity
+            android:name=".HkVisionRedirectActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
         <provider
             android:name=".muzei.HkVisionArtProvider"
             android:authorities="${hkVisionAuthority}"
