@@ -13,16 +13,16 @@ def keystorePropertiesFile = rootProject.file("keystore.properties")
 def keystoreProperties = new Properties()
 
 // Loads the keystore.properties file into the keystoreProperties object.
-if(keystorePropertiesFile.exists()) {
+if (keystorePropertiesFile.exists()) {
     keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 } else {
     // For CI builds, use debug cert to pass it.
     // https://developer.android.com/studio/publish/app-signing#debug-mode
     // https://coderwall.com/p/r09hoq/android-generate-release-debug-keystores
-    keystoreProperties['keyAlias']='androiddebugkey'
-    keystoreProperties['keyPassword']='android'
-    keystoreProperties['storeFile']='../keystore/debug.keystore'
-    keystoreProperties['storePassword']='android'
+    keystoreProperties['keyAlias'] = 'androiddebugkey'
+    keystoreProperties['keyPassword'] = 'android'
+    keystoreProperties['storeFile'] = '../keystore/debug.keystore'
+    keystoreProperties['storePassword'] = 'android'
 }
 
 android {
@@ -32,9 +32,9 @@ android {
     defaultConfig {
         applicationId "com.hossainkhan.vision"
         minSdkVersion 21
-        targetSdkVersion 30
-        versionCode 7
-        versionName "1.4"
+        targetSdkVersion 30 // NOTE: On update `enable_launcher` should be added for target API
+        versionCode 8
+        versionName "1.5"
 
         // The authority for the `MuzeiArtProvider` and `MuzeiArtDocumentsProvider`
         def hkVisionAuthorityValue = "com.hossainkhan.vision"
@@ -75,6 +75,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.3.0'
     implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation "androidx.activity:activity-ktx:1.2.0-alpha06"
 
     // Muzei Plugin
     // https://github.com/romannurik/muzei/releases
@@ -88,7 +89,7 @@ dependencies {
     // https://github.com/square/retrofit
     implementation "com.squareup.retrofit2:retrofit:2.9.0"
     // JSON Converter -  https://github.com/square/moshi/
-    implementation "com.squareup.retrofit2:converter-moshi:2.7.2"
+    implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
 
     // Firebase Google Analytics
     // https://firebase.google.com/docs/analytics/get-started?platform=android
@@ -97,7 +98,7 @@ dependencies {
 
     // Add the Firebase Crashlytics SDK.
     // https://firebase.google.com/docs/crashlytics/get-started?platform=android
-    implementation "com.google.firebase:firebase-crashlytics:17.1.0"
+    implementation "com.google.firebase:firebase-crashlytics:17.1.1"
 
     //
     // Unit tests and related libraries
