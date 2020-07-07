@@ -21,6 +21,9 @@ https://github.com/amardeshbd/android-hk-vision-muzei-plugin/releases
 
 #### Changelog
 
+#### v1.5
+- Added redirect launcher to help user navigate to activate this wallpaper source
+
 #### v1.4
 - Updated to Muzei plugin 3.4-alpha3
 - Target Android 11
