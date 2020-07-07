@@ -12,6 +12,8 @@ First, install the [Muzei Live Wallpaper](https://play.google.com/store/apps/det
 
 Next, install [Vision Muzei Plugin app](https://play.google.com/store/apps/details?id=com.hossainkhan.vision) from Google Play.
 
+[<img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" width="258" height="100" alt="Google Play 646x250">](https://play.google.com/store/apps/details?id=com.hossainkhan.vision)
+
 Once installed, go back to **Muzei** app, then the source should show up. Choose the wallpaper you like for your phone. Enjoy.
 
 > _NOTE: By default, the walpaper changes **every 3 hours**, you may want to change it to you liking. For example every day :-)_
