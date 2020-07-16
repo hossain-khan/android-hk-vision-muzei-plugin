@@ -21,6 +21,10 @@ https://github.com/amardeshbd/android-hk-vision-muzei-plugin/releases
 
 #### Changelog
 
+#### v1.6
+- Added new images
+- Updated Muzei Plugin version from Alpha-03 to Beta-01
+
 #### v1.5
 - Added redirect launcher to help user navigate to activate this wallpaper source
 
