@@ -33,8 +33,8 @@ android {
         applicationId "com.hossainkhan.vision"
         minSdkVersion 21
         targetSdkVersion 30 // NOTE: On update `enable_launcher` should be added for target API
-        versionCode 8
-        versionName "1.5"
+        versionCode 9
+        versionName "1.6"
 
         // The authority for the `MuzeiArtProvider` and `MuzeiArtDocumentsProvider`
         def hkVisionAuthorityValue = "com.hossainkhan.vision"
@@ -79,7 +79,7 @@ dependencies {
 
     // Muzei Plugin
     // https://github.com/romannurik/muzei/releases
-    implementation "com.google.android.apps.muzei:muzei-api:3.4.0-alpha03"
+    implementation "com.google.android.apps.muzei:muzei-api:3.4.0-beta01"
 
     // AndroidX Work Manager
     // https://developer.android.com/jetpack/androidx/releases/work
