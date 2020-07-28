@@ -38,6 +38,7 @@ adb install app/build/outputs/apk/debug/app-debug.apk
 # References
 * https://muzei.co/
 * https://api.muzei.co/
-* https://github.com/romannurik/muzei/releases/tag/api3.4.0-alpha3
+* https://github.com/romannurik/muzei/releases
+* https://github.com/romannurik/muzei/releases/tag/api3.4.0
 * https://medium.com/muzei/muzei-3-0-and-the-new-api-4fd3d6133db6
 * https://medium.com/muzei/announcing-muzei-live-wallpaper-3-0-d167dd5795a4
