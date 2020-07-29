@@ -33,7 +33,7 @@ android {
         applicationId "com.hossainkhan.vision"
         minSdkVersion 21
         targetSdkVersion 30 // NOTE: On update `enable_launcher` should be added for target API
-        versionCode 9
+        versionCode 10
         versionName "1.7"
 
         // The authority for the `MuzeiArtProvider` and `MuzeiArtDocumentsProvider`
