@@ -21,6 +21,9 @@ https://github.com/amardeshbd/android-hk-vision-muzei-plugin/releases
 
 #### Changelog
 
+#### v1.7
+- Updated Muzei Plugin version from 3.4.0 Beta-01 to Stable
+
 #### v1.6
 - Added new images
 - Updated Muzei Plugin version from Alpha-03 to Beta-01
