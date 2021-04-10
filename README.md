@@ -33,7 +33,7 @@ adb install app/build/outputs/apk/debug/app-debug.apk
 ```
 ./gradlew bundleRelease
 ```
-> Make sure you have `keystore.properties` available in the project.
+> Make sure you have `keystore.properties` and `upload-keystore.jks` available in the project.
 
 # References
 * https://muzei.co/
