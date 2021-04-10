@@ -18,13 +18,21 @@ import com.squareup.moshi.Json
  * ```
  */
 data class Photo(
+    @field:Json(name = "title")
     val title: String = "",
+
+    @field:Json(name = "subtitle")
     val subtitle: String = "",
+
+    @field:Json(name = "date")
     val date: String = "",
+
     @field:Json(name = "web_uri")
     val webUrl: String = "",
+
     @field:Json(name = "image_src")
     val imageSource: String = "",
+
     @field:Json(name = "raw_src")
     val rawSource: String = ""
 )
