@@ -29,6 +29,12 @@ class HkVisionWorker constructor(
     companion object {
         private const val LOG_TAG = "HkVisionWorker"
 
+        /**
+         * The attribution show on the phone when browsed via Muzei app.
+         * It's hardcoded here and does not need translation.
+         */
+        private const val AUTHOR_ATTRIBUTION = "H.K. Vision (vision.hossainkhan.com)"
+
         internal fun enqueueLoad(context: Context) {
             val workManager = WorkManager.getInstance(context)
             workManager.enqueue(
@@ -83,7 +89,7 @@ class HkVisionWorker constructor(
                             byline = photo.subtitle,
                             persistentUri = photo.rawSource.toUri(),
                             webUri = photo.webUrl.toUri(),
-                            attribution = "H.K. Vision (vision.hossainkhan.com)"
+                            attribution = AUTHOR_ATTRIBUTION
                         )
                     })
 
