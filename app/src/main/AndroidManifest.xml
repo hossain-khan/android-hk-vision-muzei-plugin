@@ -15,7 +15,8 @@
         <activity-alias
             android:name=".HkVisionLauncherActivity"
             android:enabled="@bool/enable_launcher"
-            android:targetActivity=".HkVisionRedirectActivity">
+            android:targetActivity=".HkVisionRedirectActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
