@@ -32,8 +32,8 @@ android {
         applicationId "com.hossainkhan.vision"
         minSdkVersion 21
         targetSdkVersion 31 // NOTE: On update `enable_launcher` should be added for target API
-        versionCode 11
-        versionName "1.8"
+        versionCode 12
+        versionName "1.9"
 
         // The authority for the `MuzeiArtProvider` and `MuzeiArtDocumentsProvider`
         def hkVisionAuthorityValue = "com.hossainkhan.vision"
