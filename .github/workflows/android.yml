@@ -37,7 +37,8 @@ jobs:
       with:
         node-version: 12.x
 
+    # https://www.npmjs.com/package/fast-xml-parser
     - name: Install XML Validator
       run: npm install -g fast-xml-parser
     - name: Validate AndroidManifest.xml
-      run: xml2js -V app/src/main/AndroidManifest.xml
+      run: fxparser -V app/src/main/AndroidManifest.xml
