@@ -25,12 +25,12 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 34
 
     defaultConfig {
         applicationId "com.hossainkhan.vision"
         minSdkVersion 21
-        targetSdkVersion 31 // NOTE: On update `enable_launcher` should be added for target API
+        targetSdkVersion 34 // NOTE: On update `enable_launcher` should be added for target API
         versionCode 12
         versionName "1.9"
 
