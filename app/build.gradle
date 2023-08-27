@@ -1,6 +1,5 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.google.firebase.crashlytics'
 
@@ -26,12 +25,12 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 34
 
     defaultConfig {
         applicationId "com.hossainkhan.vision"
         minSdkVersion 21
-        targetSdkVersion 31 // NOTE: On update `enable_launcher` should be added for target API
+        targetSdkVersion 34 // NOTE: On update `enable_launcher` should be added for target API
         versionCode 12
         versionName "1.9"
 
@@ -67,17 +66,18 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    namespace 'com.hossainkhan.vision'
 }
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
     // https://developer.android.com/jetpack/androidx/releases/activity
-    implementation "androidx.activity:activity-ktx:1.4.0"
+    implementation "androidx.activity:activity-ktx:1.7.2"
     // https://developer.android.com/jetpack/androidx/releases/fragment
-    implementation "androidx.fragment:fragment-ktx:1.4.1"
+    implementation "androidx.fragment:fragment-ktx:1.6.1"
 
     // Muzei Plugin
     // https://github.com/romannurik/muzei/releases
@@ -85,7 +85,7 @@ dependencies {
 
     // AndroidX Work Manager
     // https://developer.android.com/jetpack/androidx/releases/work
-    implementation "androidx.work:work-runtime-ktx:2.7.1"
+    implementation "androidx.work:work-runtime-ktx:2.8.1"
 
     // Retrofit for web API access
     // https://github.com/square/retrofit
@@ -100,7 +100,7 @@ dependencies {
 
     // Add the Firebase Crashlytics SDK.
     // https://firebase.google.com/docs/crashlytics/get-started?platform=android
-    implementation "com.google.firebase:firebase-crashlytics:18.2.8"
+    implementation "com.google.firebase:firebase-crashlytics:18.4.1"
 
     //
     // Unit tests and related libraries
