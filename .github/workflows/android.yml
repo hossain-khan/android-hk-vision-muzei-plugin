@@ -19,8 +19,9 @@ jobs:
       with:
         distribution: 'zulu'
         java-version: '17'
-    - name: Build with Gradle
-      run: ./gradlew lint build
+
+    - name: Lint & Build with Gradle
+      run: ./gradlew lintKotlin lint build
 
     - name: Run Unit Tests
       run: ./gradlew test

@@ -19,16 +19,12 @@ import com.squareup.moshi.Json
 data class VisionPhotos(
     @field:Json(name = "source")
     val source: String = "",
-
     @field:Json(name = "author")
     val author: String = "",
-
     @field:Json(name = "copyright")
     val copyright: String = "",
-
     @field:Json(name = "featured_photos")
     val featuredPhotos: List<Photo> = emptyList(),
-
     @field:Json(name = "blog_photos")
-    val blogPhotos: List<Photo> = emptyList()
+    val blogPhotos: List<Photo> = emptyList(),
 )

@@ -8,7 +8,6 @@ import org.junit.Before
 import org.junit.Test
 
 class VisionPhotosTest {
-
     private val moshi: Moshi = Moshi.Builder().build()
     private lateinit var sut: VisionPhotos
 
@@ -21,25 +20,24 @@ class VisionPhotosTest {
         sut = adapter.fromJson(readText)!!
     }
 
-
     @Test
     fun `given photos json - parses author information`() {
         assertThat(
             "Site source mismatch",
             "https://vision.hossainkhan.com/",
-            IsEqual(sut.source)
+            IsEqual(sut.source),
         )
 
         assertThat(
             "Site author mismatch",
             "Hossain Khan",
-            IsEqual(sut.author)
+            IsEqual(sut.author),
         )
 
         assertThat(
             "Site copyright mismatch",
             "All rights reserved.",
-            IsEqual(sut.copyright)
+            IsEqual(sut.copyright),
         )
     }
 
@@ -48,7 +46,7 @@ class VisionPhotosTest {
         assertThat(
             "Featured photos missing",
             2,
-            IsEqual(sut.featuredPhotos.size)
+            IsEqual(sut.featuredPhotos.size),
         )
     }
 
@@ -57,7 +55,7 @@ class VisionPhotosTest {
         assertThat(
             "Featured photos missing",
             2,
-            IsEqual(sut.blogPhotos.size)
+            IsEqual(sut.blogPhotos.size),
         )
     }
 }

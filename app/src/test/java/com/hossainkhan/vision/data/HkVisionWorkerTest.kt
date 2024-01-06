@@ -18,7 +18,6 @@ import org.junit.Before
 import org.junit.Test
 
 class HkVisionWorkerTest {
-
     private lateinit var sut: HkVisionWorker
     private val apiService: HkVisionApi = mockk()
     private lateinit var photos: VisionPhotos
@@ -41,7 +40,6 @@ class HkVisionWorkerTest {
         every { ProviderContract.getProviderClient(any(), ofType(String::class)) } returns providerClient
         mockkStatic(Uri::class)
         every { Uri.parse(any()) } returns mockk(relaxed = true)
-
 
         val readText = HkVisionWorkerTest::class.java.getResource("/photos.json")!!.readText()
         val adapter: JsonAdapter<VisionPhotos> = Moshi.Builder().build().adapter(VisionPhotos::class.java)
