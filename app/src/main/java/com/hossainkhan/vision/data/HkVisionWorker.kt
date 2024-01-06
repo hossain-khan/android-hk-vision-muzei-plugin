@@ -23,9 +23,8 @@ import com.hossainkhan.vision.model.VisionPhotos
  */
 class HkVisionWorker constructor(
     context: Context,
-    workerParams: WorkerParameters
+    workerParams: WorkerParameters,
 ) : Worker(context, workerParams) {
-
     companion object {
         private const val LOG_TAG = "HkVisionWorker"
 
@@ -42,9 +41,9 @@ class HkVisionWorker constructor(
                     .setConstraints(
                         Constraints.Builder()
                             .setRequiredNetworkType(NetworkType.CONNECTED)
-                            .build()
+                            .build(),
                     )
-                    .build()
+                    .build(),
             )
         }
     }
@@ -55,29 +54,31 @@ class HkVisionWorker constructor(
      * _NOTE: This method is called on a background thread._
      */
     override fun doWork(): Result {
-        val visionPhotos: VisionPhotos? = try {
-            FirebaseCrashlytics.getInstance().log("Loading HK Vision Photos")
-            HkVisionService.api.photos().execute().body()
-        } catch (error: Exception) {
-            Log.w(LOG_TAG, "Error reading response", error)
-            FirebaseCrashlytics.getInstance().recordException(error)
-            return Result.retry()
-        }
+        val visionPhotos: VisionPhotos? =
+            try {
+                FirebaseCrashlytics.getInstance().log("Loading HK Vision Photos")
+                HkVisionService.api.photos().execute().body()
+            } catch (error: Exception) {
+                Log.w(LOG_TAG, "Error reading response", error)
+                FirebaseCrashlytics.getInstance().recordException(error)
+                return Result.retry()
+            }
 
         if (visionPhotos == null || visionPhotos.featuredPhotos.isEmpty()) {
             Log.w(LOG_TAG, "Error reading response")
             FirebaseCrashlytics.getInstance().recordException(
-                IllegalStateException("Photo response is invalid or empty: ${visionPhotos?.featuredPhotos?.size}")
+                IllegalStateException("Photo response is invalid or empty: ${visionPhotos?.featuredPhotos?.size}"),
             )
             return Result.retry()
         } else {
             FirebaseCrashlytics.getInstance().log("Found total photos: ${visionPhotos.featuredPhotos.size}")
             Log.d(LOG_TAG, "Found total photos: ${visionPhotos.featuredPhotos.size}")
 
-            val providerClient = ProviderContract.getProviderClient(
-                applicationContext,
-                HK_VISION_MUZEI_PROVIDER_AUTHORITY
-            )
+            val providerClient =
+                ProviderContract.getProviderClient(
+                    applicationContext,
+                    HK_VISION_MUZEI_PROVIDER_AUTHORITY,
+                )
 
             providerClient.addArtwork(
                 visionPhotos.featuredPhotos
@@ -89,12 +90,12 @@ class HkVisionWorker constructor(
                             byline = photo.subtitle,
                             persistentUri = photo.rawSource.toUri(),
                             webUri = photo.webUrl.toUri(),
-                            attribution = AUTHOR_ATTRIBUTION
+                            attribution = AUTHOR_ATTRIBUTION,
                         )
-                    })
+                    },
+            )
 
             return Result.success()
         }
-
     }
 }

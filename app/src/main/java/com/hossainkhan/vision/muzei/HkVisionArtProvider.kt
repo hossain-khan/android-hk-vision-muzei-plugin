@@ -17,7 +17,7 @@ class HkVisionArtProvider : MuzeiArtProvider() {
 
         if (context == null) {
             FirebaseCrashlytics.getInstance().recordException(
-                IllegalStateException("Missing context, unable to enqueue worker to load photos.")
+                IllegalStateException("Missing context, unable to enqueue worker to load photos."),
             )
             return
         }
