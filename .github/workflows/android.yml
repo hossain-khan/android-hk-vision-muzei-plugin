@@ -11,11 +11,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
     # https://github.com/actions/setup-java
     - name: set up JDK 17
-      uses: actions/setup-java@v2
+      uses: actions/setup-java@v4
       with:
         distribution: 'zulu'
         java-version: '17'
@@ -36,7 +36,7 @@ jobs:
 # - https://medium.com/@hossainkhan/use-node-js-tools-on-github-actions-ci-workflow-120fb3b4a3e1
 #
     - name: Setup NodeJS
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v4
       with:
         node-version: 12.x
 
