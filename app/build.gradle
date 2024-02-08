@@ -103,7 +103,7 @@ dependencies {
 
     // Add the Firebase Crashlytics SDK.
     // https://firebase.google.com/docs/crashlytics/get-started?platform=android
-    implementation "com.google.firebase:firebase-crashlytics:18.6.1"
+    implementation "com.google.firebase:firebase-crashlytics:18.6.2"
 
     //
     // Unit tests and related libraries
