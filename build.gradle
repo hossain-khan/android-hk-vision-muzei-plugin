@@ -10,7 +10,7 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         // Google Services Gradle plugin v4.3.2 or later
-        classpath "com.google.gms:google-services:4.4.0"
+        classpath "com.google.gms:google-services:4.4.1"
 
         // Add the Crashlytics Gradle plugin.
         classpath "com.google.firebase:firebase-crashlytics-gradle:2.9.9"
