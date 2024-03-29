@@ -94,7 +94,7 @@ dependencies {
     // https://github.com/square/retrofit
     implementation "com.squareup.retrofit2:retrofit:2.11.0"
     // JSON Converter -  https://github.com/square/moshi/
-    implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
+    implementation "com.squareup.retrofit2:converter-moshi:2.11.0"
 
     // Firebase Google Analytics
     // https://firebase.google.com/docs/analytics/get-started?platform=android
