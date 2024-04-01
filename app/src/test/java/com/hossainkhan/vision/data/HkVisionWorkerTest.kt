@@ -9,6 +9,7 @@ import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.hossainkhan.vision.model.VisionPhotos
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.mockkObject
@@ -42,7 +43,7 @@ class HkVisionWorkerTest {
         every { Uri.parse(any()) } returns mockk(relaxed = true)
 
         val readText = HkVisionWorkerTest::class.java.getResource("/photos.json")!!.readText()
-        val adapter: JsonAdapter<VisionPhotos> = Moshi.Builder().build().adapter(VisionPhotos::class.java)
+        val adapter: JsonAdapter<VisionPhotos> = Moshi.Builder().add(KotlinJsonAdapterFactory()).build().adapter(VisionPhotos::class.java)
         photos = adapter.fromJson(readText)!!
 
         sut = HkVisionWorker(context = mockk(), workerParams = mockk())

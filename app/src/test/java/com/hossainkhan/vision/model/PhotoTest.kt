@@ -2,13 +2,14 @@ package com.hossainkhan.vision.model
 
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import org.hamcrest.MatcherAssert.assertThat
 import org.hamcrest.core.IsEqual
 import org.junit.Before
 import org.junit.Test
 
 class PhotoTest {
-    private val moshi: Moshi = Moshi.Builder().build()
+    private val moshi: Moshi = Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
     private lateinit var sut: Photo
 
     @Before

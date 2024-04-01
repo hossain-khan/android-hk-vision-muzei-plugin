@@ -89,3 +89,4 @@ keystore.properties
 keystore/upload-keystore.jks
 keystore/deployment_cert.der
 app/release/
+.idea/copilot/
