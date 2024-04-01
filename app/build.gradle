@@ -4,6 +4,10 @@ plugins {
     id 'com.google.gms.google-services'
     id 'com.google.firebase.crashlytics'
     id 'org.jmailen.kotlinter'
+
+    // KSP plugin
+    // https://github.com/google/ksp/releases
+    id("com.google.devtools.ksp").version("1.9.23-1.0.19")
 }
 
 
@@ -94,7 +98,10 @@ dependencies {
     // https://github.com/square/retrofit
     implementation "com.squareup.retrofit2:retrofit:2.11.0"
     // JSON Converter -  https://github.com/square/moshi/
-    implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
+    implementation "com.squareup.retrofit2:converter-moshi:2.11.0"
+    implementation "com.squareup.moshi:moshi-kotlin:1.15.1"
+    //implementation "com.squareup.moshi:moshi-kotlin-codegen:1.15.1"
+    ksp("com.squareup.moshi:moshi-kotlin-codegen:1.15.1")
 
     // Firebase Google Analytics
     // https://firebase.google.com/docs/analytics/get-started?platform=android

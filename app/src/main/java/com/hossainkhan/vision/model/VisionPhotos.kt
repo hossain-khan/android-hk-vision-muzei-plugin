@@ -1,6 +1,7 @@
 package com.hossainkhan.vision.model
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Root object for HK Vision photos.
@@ -16,6 +17,7 @@ import com.squareup.moshi.Json
  *
  * See [Photos.json](https://vision.hossainkhan.com/photos.json)
  */
+@JsonClass(generateAdapter = true)
 data class VisionPhotos(
     @field:Json(name = "source")
     val source: String = "",

@@ -1,6 +1,7 @@
 package com.hossainkhan.vision.model
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 /**
  * Single photo object.
@@ -17,6 +18,7 @@ import com.squareup.moshi.Json
  * }
  * ```
  */
+@JsonClass(generateAdapter = true)
 data class Photo(
     @field:Json(name = "title")
     val title: String = "",
