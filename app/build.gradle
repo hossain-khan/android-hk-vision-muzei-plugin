@@ -84,7 +84,7 @@ dependencies {
     // https://developer.android.com/jetpack/androidx/releases/activity
     implementation "androidx.activity:activity-ktx:1.8.2"
     // https://developer.android.com/jetpack/androidx/releases/fragment
-    implementation "androidx.fragment:fragment-ktx:1.6.2"
+    implementation "androidx.fragment:fragment-ktx:1.7.0"
 
     // Muzei Plugin
     // https://github.com/romannurik/muzei/releases
