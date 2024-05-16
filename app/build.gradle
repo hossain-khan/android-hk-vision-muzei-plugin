@@ -116,5 +116,5 @@ dependencies {
     // Unit tests and related libraries
     //
     testImplementation "junit:junit:4.13.2"
-    testImplementation "io.mockk:mockk:1.13.10"
+    testImplementation "io.mockk:mockk:1.13.11"
 }
