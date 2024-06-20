@@ -92,7 +92,7 @@ dependencies {
 
     // Muzei Plugin
     // https://github.com/romannurik/muzei/releases
-    implementation "com.google.android.apps.muzei:muzei-api:3.4.1"
+    implementation "com.google.android.apps.muzei:muzei-api:3.4.2"
 
     // AndroidX Work Manager
     // https://developer.android.com/jetpack/androidx/releases/work
