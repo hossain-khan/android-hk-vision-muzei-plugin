@@ -7,7 +7,7 @@ plugins {
 
     // KSP plugin
     // https://github.com/google/ksp/releases
-    id("com.google.devtools.ksp").version("1.9.23-1.0.20")
+    id("com.google.devtools.ksp").version("2.0.0-1.0.22")
 }
 
 
@@ -32,7 +32,7 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    compileSdkVersion 34
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.hossainkhan.vision"
@@ -74,6 +74,10 @@ android {
         jvmTarget = '1.8'
     }
     namespace 'com.hossainkhan.vision'
+
+    buildFeatures {
+        buildConfig true
+    }
 }
 
 dependencies {
@@ -84,11 +88,11 @@ dependencies {
     // https://developer.android.com/jetpack/androidx/releases/activity
     implementation "androidx.activity:activity-ktx:1.9.0"
     // https://developer.android.com/jetpack/androidx/releases/fragment
-    implementation "androidx.fragment:fragment-ktx:1.7.1"
+    implementation "androidx.fragment:fragment-ktx:1.8.0"
 
     // Muzei Plugin
     // https://github.com/romannurik/muzei/releases
-    implementation "com.google.android.apps.muzei:muzei-api:3.4.1"
+    implementation "com.google.android.apps.muzei:muzei-api:3.4.2"
 
     // AndroidX Work Manager
     // https://developer.android.com/jetpack/androidx/releases/work

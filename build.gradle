@@ -1,18 +1,21 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-    ext.kotlin_version = '1.9.23'
+    ext.kotlin_version = '2.0.0'
     repositories {
         google()
         mavenCentral()
     }
     dependencies {
+        // https://developer.android.com/build/releases/gradle-plugin
         classpath 'com.android.tools.build:gradle:8.4.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         // Google Services Gradle plugin v4.3.2 or later
+        // https://developers.google.com/android/guides/google-services-plugin
         classpath "com.google.gms:google-services:4.4.2"
 
         // Add the Crashlytics Gradle plugin.
+        // https://firebase.google.com/docs/crashlytics/get-started?platform=android
         classpath "com.google.firebase:firebase-crashlytics-gradle:3.0.1"
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -33,6 +36,7 @@ allprojects {
     }
 }
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
+tasks.register("clean", Delete) {
+    description = "Deletes the root project's build directory."
+    delete(layout.buildDirectory)
 }
