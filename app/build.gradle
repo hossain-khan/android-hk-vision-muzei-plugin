@@ -38,6 +38,10 @@ android {
         applicationId "com.hossainkhan.vision"
         minSdkVersion 21
         targetSdkVersion 34 // NOTE: On update `enable_launcher` should be added for target API
+
+        // Update the version code and version name before each release
+        // Current release:
+        // - https://github.com/hossain-khan/android-hk-vision-muzei-plugin/releases
         versionCode 13
         versionName "1.10"
 
