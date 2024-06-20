@@ -74,6 +74,10 @@ android {
         jvmTarget = '1.8'
     }
     namespace 'com.hossainkhan.vision'
+
+    buildFeatures {
+        buildConfig true
+    }
 }
 
 dependencies {
