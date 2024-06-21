@@ -90,3 +90,6 @@ keystore/upload-keystore.jks
 keystore/deployment_cert.der
 app/release/
 .idea/copilot/
+.idea/appInsightsSettings.xml
+.idea/deploymentTargetSelector.xml
+.idea/other.xml
