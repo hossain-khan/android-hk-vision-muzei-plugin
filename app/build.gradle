@@ -7,7 +7,7 @@ plugins {
 
     // KSP plugin
     // https://github.com/google/ksp/releases
-    id("com.google.devtools.ksp").version("2.0.0-1.0.22")
+    id("com.google.devtools.ksp").version("2.0.0-1.0.24")
 }
 
 
@@ -90,9 +90,9 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.13.1'
     implementation 'androidx.appcompat:appcompat:1.7.0'
     // https://developer.android.com/jetpack/androidx/releases/activity
-    implementation "androidx.activity:activity-ktx:1.9.0"
+    implementation "androidx.activity:activity-ktx:1.9.1"
     // https://developer.android.com/jetpack/androidx/releases/fragment
-    implementation "androidx.fragment:fragment-ktx:1.8.0"
+    implementation "androidx.fragment:fragment-ktx:1.8.2"
 
     // Muzei Plugin
     // https://github.com/romannurik/muzei/releases
@@ -118,11 +118,11 @@ dependencies {
 
     // Add the Firebase Crashlytics SDK.
     // https://firebase.google.com/docs/crashlytics/get-started?platform=android
-    implementation "com.google.firebase:firebase-crashlytics:19.0.2"
+    implementation "com.google.firebase:firebase-crashlytics:19.0.3"
 
     //
     // Unit tests and related libraries
     //
     testImplementation "junit:junit:4.13.2"
-    testImplementation "io.mockk:mockk:1.13.11"
+    testImplementation "io.mockk:mockk:1.13.12"
 }
