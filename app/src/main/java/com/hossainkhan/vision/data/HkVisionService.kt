@@ -12,12 +12,14 @@ object HkVisionService {
     private val okHttpClient: OkHttpClient = OkHttpClient.Builder().build()
 
     private val moshi: Moshi =
-        Moshi.Builder()
+        Moshi
+            .Builder()
             .add(KotlinJsonAdapterFactory())
             .build()
 
     val api: HkVisionApi by lazy {
-        Retrofit.Builder()
+        Retrofit
+            .Builder()
             .baseUrl(BASE_URL)
             .client(okHttpClient)
             .addConverterFactory(MoshiConverterFactory.create(moshi))
