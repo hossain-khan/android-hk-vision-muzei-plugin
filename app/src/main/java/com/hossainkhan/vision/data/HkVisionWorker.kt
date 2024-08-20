@@ -39,11 +39,11 @@ class HkVisionWorker constructor(
             workManager.enqueue(
                 OneTimeWorkRequestBuilder<HkVisionWorker>()
                     .setConstraints(
-                        Constraints.Builder()
+                        Constraints
+                            .Builder()
                             .setRequiredNetworkType(NetworkType.CONNECTED)
                             .build(),
-                    )
-                    .build(),
+                    ).build(),
             )
         }
     }
@@ -57,7 +57,10 @@ class HkVisionWorker constructor(
         val visionPhotos: VisionPhotos? =
             try {
                 FirebaseCrashlytics.getInstance().log("Loading HK Vision Photos")
-                HkVisionService.api.photos().execute().body()
+                HkVisionService.api
+                    .photos()
+                    .execute()
+                    .body()
             } catch (error: Exception) {
                 Log.w(LOG_TAG, "Error reading response", error)
                 FirebaseCrashlytics.getInstance().recordException(error)

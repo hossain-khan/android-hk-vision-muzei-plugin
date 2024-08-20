@@ -43,7 +43,12 @@ class HkVisionWorkerTest {
         every { Uri.parse(any()) } returns mockk(relaxed = true)
 
         val readText = HkVisionWorkerTest::class.java.getResource("/photos.json")!!.readText()
-        val adapter: JsonAdapter<VisionPhotos> = Moshi.Builder().add(KotlinJsonAdapterFactory()).build().adapter(VisionPhotos::class.java)
+        val adapter: JsonAdapter<VisionPhotos> =
+            Moshi
+                .Builder()
+                .add(KotlinJsonAdapterFactory())
+                .build()
+                .adapter(VisionPhotos::class.java)
         photos = adapter.fromJson(readText)!!
 
         sut = HkVisionWorker(context = mockk(), workerParams = mockk())
