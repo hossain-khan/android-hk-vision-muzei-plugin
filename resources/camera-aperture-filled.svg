@@ -1,0 +1,11 @@
+<svg width="144" height="144" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-reactroot="">
+<path fill="#f2784b" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" undefined="1"></path>
+<path fill="#f2784b" d="M14.3099 8H9.68988L7.37988 12L9.68988 16H14.3099L16.6199 12L14.3099 8Z" undefined="1"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-width="1" stroke="white" d="M9.68996 15.9999L3.95996 6.06995"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-width="1" stroke="white" d="M7.37988 12.0001L9.68988 8.00006L13.1199 2.06006"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-width="1" stroke="white" d="M16.6199 11.99L10.8799 21.94"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-width="1" stroke="white" d="M20.0501 17.93L14.3101 8"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-width="1" stroke="white" d="M14.3101 16H2.84009"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-width="1" stroke="white" d="M21.1599 8H9.68994"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-width="1" stroke="white" d="M14.3099 8H9.68988L7.37988 12L9.68988 16H14.3099L16.6199 12L14.3099 8Z"></path>
+</svg>
