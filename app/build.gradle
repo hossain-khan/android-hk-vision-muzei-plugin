@@ -31,13 +31,21 @@ if (keystorePropertiesFile.exists()) {
     keystoreProperties['storePassword'] = 'android'
 }
 
+java {
+    toolchain {
+        // Configures the Java toolchain to use Java 17
+        // https://docs.gradle.org/current/userguide/toolchains.html
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
 android {
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.hossainkhan.vision"
         minSdkVersion 21
-        targetSdkVersion 34 // NOTE: On update `enable_launcher` should be added for target API
+        targetSdkVersion 35 // NOTE: On update `enable_launcher` should be added for target API
 
         // Update the version code and version name before each release
         // Current release:
@@ -87,7 +95,7 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.13.1'
+    implementation 'androidx.core:core-ktx:1.15.0'
     implementation 'androidx.appcompat:appcompat:1.7.0'
     // https://developer.android.com/jetpack/androidx/releases/activity
     implementation "androidx.activity:activity-ktx:1.9.3"
@@ -100,7 +108,7 @@ dependencies {
 
     // AndroidX Work Manager
     // https://developer.android.com/jetpack/androidx/releases/work
-    implementation "androidx.work:work-runtime-ktx:2.9.1"
+    implementation "androidx.work:work-runtime-ktx:2.10.0"
 
     // Retrofit for web API access
     // https://github.com/square/retrofit
