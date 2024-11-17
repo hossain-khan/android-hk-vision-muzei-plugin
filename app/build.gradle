@@ -100,7 +100,7 @@ dependencies {
 
     // AndroidX Work Manager
     // https://developer.android.com/jetpack/androidx/releases/work
-    implementation "androidx.work:work-runtime-ktx:2.9.1"
+    implementation "androidx.work:work-runtime-ktx:2.10.0"
 
     // Retrofit for web API access
     // https://github.com/square/retrofit
