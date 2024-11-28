@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v4
       #
       # This is experimental section to showcase multiple environments like JDK, Node, etc
       # can be mixed together to have greater control in the CI environment.
