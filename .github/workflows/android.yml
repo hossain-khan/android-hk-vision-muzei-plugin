@@ -26,23 +26,4 @@ jobs:
     - name: Run Unit Tests
       run: ./gradlew test
 
-#
-# This is experimental section to showcase multiple environments like JDK, Node, etc
-# can be mixed together to have greater control in the CI environment.
-#
-# In this example, we activate Node on CI, install a Node module using npm
-# and validate `AndroidManifest.xml` file as proof-of-concept (not required for Android dev).
-#
-# See technical article on Medium.com
-# - https://medium.com/@hossainkhan/use-node-js-tools-on-github-actions-ci-workflow-120fb3b4a3e1
-#
-    - name: Setup NodeJS
-      uses: actions/setup-node@v4
-      with:
-        node-version: 12.x
-
-    # https://www.npmjs.com/package/fast-xml-parser
-    - name: Install XML Validator
-      run: npm install -g fast-xml-parser
-    - name: Validate AndroidManifest.xml
-      run: fxparser -V app/src/main/AndroidManifest.xml
+# NOTE: XML validation using node workflow is moved to `validations.yml` file.

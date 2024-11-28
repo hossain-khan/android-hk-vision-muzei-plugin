@@ -1,0 +1,41 @@
+# Validates different things as PoC using Node
+name: Validation CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      #
+      # This is experimental section to showcase multiple environments like JDK, Node, etc
+      # can be mixed together to have greater control in the CI environment.
+      #
+      # In this example, we activate Node on CI, install a Node module using npm
+      # and validate `AndroidManifest.xml` file as proof-of-concept (not required for Android dev).
+      #
+      # See technical article on Medium.com
+      # - https://medium.com/@hossainkhan/use-node-js-tools-on-github-actions-ci-workflow-120fb3b4a3e1
+      #
+      # Node setup:
+      # - https://docs.github.com/en/actions/use-cases-and-examples/building-and-testing/building-and-testing-nodejs
+      #
+      - name: Setup NodeJS
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+
+      # # Installs the fast-xml-parser globally using npm
+      # https://www.npmjs.com/package/fast-xml-parser
+      - name: Install XML Validator
+        run: npm install -g fast-xml-parser
+
+      # PoC: Validates the AndroidManifest.xml file using fast-xml-parser
+      - name: Validate AndroidManifest.xml
+        run: fxparser -V app/src/main/AndroidManifest.xml
