@@ -3,7 +3,7 @@ plugins {
     // This plugin resolves toolchains using Foojay's API
     // - https://github.com/gradle/foojay-toolchains
     // - https://plugins.gradle.org/plugin/org.gradle.toolchains.foojay-resolver-convention
-    id 'org.gradle.toolchains.foojay-resolver-convention' version '0.8.0'
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '0.9.0'
 }
 
 include ':app'
