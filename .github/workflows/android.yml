@@ -14,11 +14,12 @@ jobs:
     - uses: actions/checkout@v4
 
     # https://github.com/actions/setup-java
-    - name: set up JDK 17
+    - name: set up JDK
       uses: actions/setup-java@v4
       with:
         distribution: 'zulu'
-        java-version: '17'
+        # Use LTS version - https://www.oracle.com/ca-en/java/technologies/java-se-support-roadmap.html
+        java-version: '21'
 
     - name: Lint & Build with Gradle
       run: ./gradlew lintKotlin lint build
