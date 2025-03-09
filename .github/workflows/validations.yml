@@ -31,10 +31,11 @@ jobs:
         with:
           node-version: '20.x'
 
-      # # Installs the fast-xml-parser globally using npm
+      # Installs the fast-xml-parser globally using npm
+      # Uses older build to avoid `package.json` lookup issue
       # https://www.npmjs.com/package/fast-xml-parser
       - name: Install XML Validator
-        run: npm install -g fast-xml-parser
+        run: npm install -g fast-xml-parser@4.5.2
 
       # PoC: Validates the AndroidManifest.xml file using fast-xml-parser
       - name: Validate AndroidManifest.xml

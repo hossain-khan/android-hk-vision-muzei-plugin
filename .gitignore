@@ -94,3 +94,4 @@ app/release/
 .idea/deploymentTargetSelector.xml
 .idea/other.xml
 *.salive
+.idea/AndroidProjectSystem.xml
