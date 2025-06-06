@@ -16,7 +16,7 @@ buildscript {
 
         // Add the Crashlytics Gradle plugin.
         // https://firebase.google.com/docs/crashlytics/get-started?platform=android
-        classpath "com.google.firebase:firebase-crashlytics-gradle:3.0.3"
+        classpath "com.google.firebase:firebase-crashlytics-gradle:3.0.4"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
