@@ -35,6 +35,27 @@ adb install app/build/outputs/apk/debug/app-debug.apk
 ```
 > Make sure you have `keystore.properties` and `upload-keystore.jks` available in the project.
 
+## GitHub Copilot Coding Agent Setup
+
+This project is configured for use with [GitHub Copilot coding agent](https://docs.github.com/en/copilot/customizing-copilot/customizing-the-development-environment-for-copilot-coding-agent). The configuration files are located in the `.copilot/` directory:
+
+- **`.copilot/agent.md`** - Project overview and architecture documentation
+- **`.copilot/instructions.md`** - Copilot-specific coding guidelines and patterns
+- **`.copilot/firewall-rules.md`** - Required firewall configuration documentation
+- **`.copilot/firewall-config.txt`** - Detailed firewall rules for system administrators
+- **`.copilot/setup-firewall.sh`** - Automated firewall setup script for Linux
+
+### Firewall Configuration
+
+The project requires access to the following domains for building and development:
+
+- `dl.google.com` - Android Gradle Plugin and Google Maven Repository
+- `repo1.maven.org` - Maven Central Repository
+- `services.gradle.org` - Gradle services
+- `vision.hossainkhan.com` - H.K. Vision API backend
+
+See `.copilot/firewall-rules.md` for the complete list and setup instructions.
+
 # References
 * https://muzei.co/
 * https://api.muzei.co/

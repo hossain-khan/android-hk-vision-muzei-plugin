@@ -1,0 +1,53 @@
+# Firewall Rules for Android Development Environment
+
+# This configuration allows the necessary network access for the Android HK Vision Muzei Plugin
+# to build and run successfully with GitHub Copilot coding agent.
+
+# Format: domain.name - purpose/description
+
+# Core Android Development Dependencies
+dl.google.com - Android Gradle Plugin and Google Maven Repository
+maven.google.com - Google/Android library dependencies
+repo1.maven.org - Maven Central Repository (primary mirror)
+repo.maven.apache.org - Maven Central Repository (Apache mirror)
+central.maven.org - Maven Central Repository (main)
+
+# Gradle Build System
+services.gradle.org - Gradle services and version information
+downloads.gradle.org - Gradle distribution downloads  
+repo.gradle.org - Gradle plugin repository
+gradle.org - Main Gradle website
+
+# Kotlin and JetBrains
+maven.pkg.jetbrains.space - JetBrains packages
+cache-redirector.jetbrains.com - JetBrains cache
+repo.spring.io - Spring repository (may be used by some plugins)
+
+# Firebase and Google Cloud Services
+firebase.google.com - Firebase services
+console.firebase.google.com - Firebase console
+googleapis.com - Google APIs
+www.googleapis.com - Google APIs (www subdomain)
+
+# Application-Specific
+vision.hossainkhan.com - H.K. Vision API backend
+
+# Additional Android/Google Services (may be needed)
+android.googlesource.com - Android source code repository
+source.android.com - Android Open Source Project
+developer.android.com - Android developer documentation
+
+# Allow all subdomains of these critical domains:
+# *.google.com (for comprehensive Google services)
+# *.googleapis.com (for Google API services)
+# *.maven.org (for Maven repositories)
+# *.gradle.org (for Gradle services)
+
+# Protocol: HTTPS (443) required for all above domains
+# Protocol: HTTP (80) may be needed for some Maven repositories
+
+# Note: Consider implementing these rules with appropriate firewall management tools:
+# - iptables (Linux)
+# - pfctl (macOS)
+# - Windows Firewall (Windows)
+# - Corporate firewall solutions (Cisco, Fortinet, etc.)
