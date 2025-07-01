@@ -100,7 +100,7 @@ dependencies {
     // https://developer.android.com/jetpack/androidx/releases/activity
     implementation "androidx.activity:activity-ktx:1.10.1"
     // https://developer.android.com/jetpack/androidx/releases/fragment
-    implementation "androidx.fragment:fragment-ktx:1.8.7"
+    implementation "androidx.fragment:fragment-ktx:1.8.8"
 
     // Muzei Plugin
     // https://github.com/romannurik/muzei/releases
@@ -108,7 +108,7 @@ dependencies {
 
     // AndroidX Work Manager
     // https://developer.android.com/jetpack/androidx/releases/work
-    implementation "androidx.work:work-runtime-ktx:2.10.1"
+    implementation "androidx.work:work-runtime-ktx:2.10.2"
 
     // Retrofit for web API access
     // https://github.com/square/retrofit
@@ -126,11 +126,11 @@ dependencies {
 
     // Add the Firebase Crashlytics SDK.
     // https://firebase.google.com/docs/crashlytics/get-started?platform=android
-    implementation "com.google.firebase:firebase-crashlytics:19.4.3"
+    implementation "com.google.firebase:firebase-crashlytics:19.4.4"
 
     //
     // Unit tests and related libraries
     //
     testImplementation "junit:junit:4.13.2"
-    testImplementation "io.mockk:mockk:1.14.2"
+    testImplementation "io.mockk:mockk:1.14.4"
 }
