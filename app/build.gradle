@@ -40,12 +40,12 @@ java {
 }
 
 android {
-    compileSdk 35
+    compileSdk 36
 
     defaultConfig {
         applicationId "com.hossainkhan.vision"
         minSdkVersion 21
-        targetSdkVersion 35 // NOTE: On update `enable_launcher` should be added for target API
+        targetSdkVersion 36 // NOTE: On update `enable_launcher` should be added for target API
 
         // Update the version code and version name before each release
         // Current release:
