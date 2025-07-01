@@ -50,8 +50,8 @@ android {
         // Update the version code and version name before each release
         // Current release:
         // - https://github.com/hossain-khan/android-hk-vision-muzei-plugin/releases
-        versionCode 16
-        versionName "1.13"
+        versionCode 17
+        versionName "1.14"
 
         // The authority for the `MuzeiArtProvider` and `MuzeiArtDocumentsProvider`
         def hkVisionAuthorityValue = "com.hossainkhan.vision"
