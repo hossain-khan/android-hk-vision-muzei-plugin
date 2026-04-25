@@ -95,12 +95,12 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.16.0'
+    implementation 'androidx.core:core-ktx:1.17.0'
     implementation 'androidx.appcompat:appcompat:1.7.1'
     // https://developer.android.com/jetpack/androidx/releases/activity
-    implementation "androidx.activity:activity-ktx:1.10.1"
+    implementation "androidx.activity:activity-ktx:1.11.0"
     // https://developer.android.com/jetpack/androidx/releases/fragment
-    implementation "androidx.fragment:fragment-ktx:1.8.8"
+    implementation "androidx.fragment:fragment-ktx:1.8.9"
 
     // Muzei Plugin
     // https://github.com/romannurik/muzei/releases
@@ -132,5 +132,5 @@ dependencies {
     // Unit tests and related libraries
     //
     testImplementation "junit:junit:4.13.2"
-    testImplementation "io.mockk:mockk:1.14.4"
+    testImplementation "io.mockk:mockk:1.14.9"
 }
