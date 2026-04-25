@@ -16,7 +16,11 @@ import com.hossainkhan.vision.BuildConfig.HK_VISION_MUZEI_PROVIDER_AUTHORITY
 import com.hossainkhan.vision.model.VisionPhotos
 
 /**
- * Background worker that is used to load the images.
+ * Background worker that fetches photos from the HK Vision API and registers them
+ * as [Artwork] items with the Muzei [ProviderContract].
+ *
+ * Both [VisionPhotos.featuredPhotos] and [VisionPhotos.blogPhotos] are combined and
+ * submitted. The worker retries automatically on network errors or empty responses.
  *
  * References:
  * - [UnsplashExampleWorker.kt](https://github.com/romannurik/muzei/blob/master/example-unsplash/src/main/java/com/example/muzei/unsplash/UnsplashExampleWorker.kt)
@@ -29,11 +33,17 @@ class HkVisionWorker constructor(
         private const val LOG_TAG = "HkVisionWorker"
 
         /**
-         * The attribution show on the phone when browsed via Muzei app.
+         * The attribution shown on the phone when browsed via Muzei app.
          * It's hardcoded here and does not need translation.
          */
         private const val AUTHOR_ATTRIBUTION = "H.K. Vision (vision.hossainkhan.com)"
 
+        /**
+         * Enqueues a one-time [HkVisionWorker] task that runs only when the device
+         * has a network connection.
+         *
+         * @param context the application [Context] used to obtain the [WorkManager] instance.
+         */
         internal fun enqueueLoad(context: Context) {
             val workManager = WorkManager.getInstance(context)
             workManager.enqueue(

@@ -1,4 +1,4 @@
-[![Android CI](https://github.com/hossain-khan/android-hk-vision-muzei-plugin/actions/workflows/android.yml/badge.svg)](https://github.com/hossain-khan/android-hk-vision-muzei-plugin/actions/workflows/android.yml) [![CodeFactor](https://www.codefactor.io/repository/github/hossain-khan/android-hk-vision-muzei-plugin/badge)](https://www.codefactor.io/repository/github/hossain-khan/android-hk-vision-muzei-plugin) [![Muzei.co](https://img.shields.io/badge/muzei.co-API%203.4%2B-blue)](http://api.muzei.co/)
+[![Android CI](https://github.com/hossain-khan/android-hk-vision-muzei-plugin/actions/workflows/android.yml/badge.svg)](https://github.com/hossain-khan/android-hk-vision-muzei-plugin/actions/workflows/android.yml) [![CodeFactor](https://www.codefactor.io/repository/github/hossain-khan/android-hk-vision-muzei-plugin/badge)](https://www.codefactor.io/repository/github/hossain-khan/android-hk-vision-muzei-plugin) [![Muzei.co](https://img.shields.io/badge/muzei.co-API%203.4%2B-blue)](https://api.muzei.co/)
 
 # HK Vision - Muzei Plugin
 Muzei wallpaper source plugin for [vision.hossainkhan.com](https://vision.hossainkhan.com/) site.
@@ -16,7 +16,7 @@ Next, install [Vision Muzei Plugin app](https://play.google.com/store/apps/detai
 
 Once installed, go back to **Muzei** app, then the source should show up. Choose the wallpaper you like for your phone. Enjoy.
 
-> _NOTE: By default, the walpaper changes **every 3 hours**, you may want to change it to you liking. For example every day :-)_
+> _NOTE: By default, the wallpaper changes **every 3 hours**, you may want to change it to your liking. For example every day :-)_
 
 [![android-muzei-plugin-demo-large-small](https://user-images.githubusercontent.com/99822/81618324-19d56300-93b5-11ea-8367-62376439a99c.png)](https://play.google.com/store/apps/details?id=com.hossainkhan.vision)
 

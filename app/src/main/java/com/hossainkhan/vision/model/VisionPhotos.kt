@@ -11,7 +11,8 @@ import com.squareup.moshi.JsonClass
  *    "source": "https://vision.hossainkhan.com/",
  *    "author": "Hossain Khan",
  *    "copyright": "All rights reserved.",
- *    "featured_photos": [ { ... }, { ... } ]
+ *    "featured_photos": [ { ... }, { ... } ],
+ *    "blog_photos": [ { ... }, { ... } ]
  * }
  * ```
  *

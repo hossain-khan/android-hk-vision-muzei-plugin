@@ -6,6 +6,12 @@ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
+/**
+ * Singleton service that provides the configured [HkVisionApi] Retrofit instance.
+ *
+ * Uses [OkHttpClient] for HTTP transport and [Moshi] with [KotlinJsonAdapterFactory]
+ * for JSON deserialization. The base URL points to [https://vision.hossainkhan.com/].
+ */
 object HkVisionService {
     private const val BASE_URL = "https://vision.hossainkhan.com/"
 

@@ -12,6 +12,12 @@ import com.hossainkhan.vision.data.HkVisionWorker
  * https://github.com/muzei/muzei/blob/main/example-unsplash/src/main/java/com/example/muzei/unsplash/UnsplashExampleArtProvider.kt
  */
 class HkVisionArtProvider : MuzeiArtProvider() {
+    /**
+     * Called by Muzei when it needs new artwork. Enqueues [HkVisionWorker] to fetch
+     * photos from the remote API and register them with the provider.
+     *
+     * @param initial `true` when this is the first load after the provider was selected.
+     */
     override fun onLoadRequested(initial: Boolean) {
         val context: Context? = context
 
